@@ -22,7 +22,7 @@ export const DemoModal = ({ open, onOpenChange }: DemoModalProps) => {
           <div className="border border-divider bg-bg-soft overflow-hidden">
             <iframe
               src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3E0m_G5AEy5KBxLK21D2XeJnd5vLbA85Wp7ZjlCuQudS8L5oiS6Ox8WANUXpTB0YMWNwCkhBw8?gv=true"
-              title="Réserver un rendez-vous avec Clarity"
+              title="Réserver un rendez-vous avec Klora"
               className="w-full h-[600px] border-0"
               loading="lazy"
             />

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/clarity-logo.png";
+import logo from "@/assets/klora-logo.png";
 
 interface NavProps {
   onDemoClick: () => void;
@@ -40,7 +40,7 @@ export const Nav = ({ onDemoClick }: NavProps) => {
     >
       <div className="container mx-auto flex h-16 items-center justify-between">
         <a href="#top" onClick={(e) => handleAnchor(e, "#top")} className="flex items-center">
-          <img src={logo} alt="Clarity — Agence IA Vocale" className="h-9 w-auto" />
+          <img src={logo} alt="Klora — Agence IA Vocale" className="h-9 w-auto" />
         </a>
 
         <nav className="hidden md:flex items-center gap-10">
