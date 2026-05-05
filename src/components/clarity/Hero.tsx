@@ -72,7 +72,7 @@ export const Hero = ({ onDemoClick }: HeroProps) => {
               className="font-sans font-light text-[#9A9088] mt-8 mx-auto"
               style={{ fontSize: 16, lineHeight: 1.7, maxWidth: 540 }}
             >
-              Clarity installe une réceptionniste IA qui répond à chaque appel,
+              Klora installe une réceptionniste IA qui répond à chaque appel,
               prend les rendez-vous et récupère le chiffre d'affaires que vous
               perdez en ce moment.
             </p>

@@ -1,5 +1,5 @@
 import { FadeInUp } from "./motion";
-import logo from "@/assets/clarity-logo.png";
+import logo from "@/assets/klora-logo.png";
 
 interface CtaFooterProps {
   onDemoClick: () => void;
@@ -44,16 +44,16 @@ export const CtaFooter = ({ onDemoClick }: CtaFooterProps) => {
 
       <footer className="border-t border-divider px-6 py-8">
         <div className="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-4">
-          <img src={logo} alt="Clarity" className="h-7 w-auto" />
+          <img src={logo} alt="Klora" className="h-7 w-auto" />
           <p className="text-text-muted text-center font-light" style={{ fontSize: 12 }}>
-            © 2025 Clarity — AI Voice Agency — Nice, Côte d'Azur
+            © 2025 Klora — AI Voice Agency — Nice, Côte d'Azur
           </p>
           <a
-            href="mailto:contact@clarity-agency.fr"
+            href="mailto:contact@klora-agency.fr"
             className="text-accent font-medium hover:opacity-80 transition-opacity"
             style={{ fontSize: 12 }}
           >
-            contact@clarity-agency.fr
+            contact@klora-agency.fr
           </a>
         </div>
       </footer>

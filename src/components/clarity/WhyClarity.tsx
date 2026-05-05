@@ -7,12 +7,12 @@ const facts = [
   { n: "200+", label: "Prospects qualifiés dans votre zone" },
 ];
 
-export const WhyClarity = () => {
+export const WhyKlora = () => {
   return (
     <section className="bg-bg-dark py-[120px] px-6">
       <div className="container mx-auto max-w-6xl">
         <FadeInUp>
-          <p className="label-eyebrow text-accent">Pourquoi Clarity</p>
+          <p className="label-eyebrow text-accent">Pourquoi Klora</p>
         </FadeInUp>
         <FadeInUp delay={0.15}>
           <h2

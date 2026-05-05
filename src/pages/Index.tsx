@@ -4,7 +4,7 @@ import { Hero } from "@/components/clarity/Hero";
 import { Problem } from "@/components/clarity/Problem";
 import { Solution } from "@/components/clarity/Solution";
 import { Pricing } from "@/components/clarity/Pricing";
-import { WhyClarity } from "@/components/clarity/WhyClarity";
+import { WhyKlora } from "@/components/clarity/WhyKlora";
 import { CtaFooter } from "@/components/clarity/CtaFooter";
 import { DemoModal } from "@/components/clarity/DemoModal";
 
@@ -19,7 +19,7 @@ const Index = () => {
       <Problem />
       <Solution />
       <Pricing onDemoClick={openDemo} />
-      <WhyClarity />
+      <WhyKlora />
       <CtaFooter onDemoClick={openDemo} />
       <DemoModal open={demoOpen} onOpenChange={setDemoOpen} />
     </main>
