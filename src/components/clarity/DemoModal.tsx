@@ -18,9 +18,14 @@ export const DemoModal = ({ open, onOpenChange }: DemoModalProps) => {
             Choisissez un créneau qui vous convient. Gratuit, sans engagement.
           </p>
         </DialogHeader>
-        <div className="px-8 py-10">
-          <div className="flex h-80 items-center justify-center border border-divider bg-bg-soft">
-            <p className="label-eyebrow text-text-muted">Calendly embed goes here</p>
+        <div className="px-8 py-6">
+          <div className="border border-divider bg-bg-soft overflow-hidden">
+            <iframe
+              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3E0m_G5AEy5KBxLK21D2XeJnd5vLbA85Wp7ZjlCuQudS8L5oiS6Ox8WANUXpTB0YMWNwCkhBw8?gv=true"
+              title="Réserver un rendez-vous avec Clarity"
+              className="w-full h-[600px] border-0"
+              loading="lazy"
+            />
           </div>
         </div>
       </DialogContent>
