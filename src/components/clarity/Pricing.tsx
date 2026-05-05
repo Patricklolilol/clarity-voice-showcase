@@ -6,7 +6,7 @@ interface PricingProps {
 
 const plans = [
   {
-    name: "Essential",
+    name: "Standard",
     price: "€197",
     suffix: "/mois",
     target: "Pour les cabinets paramédicaux",
@@ -24,7 +24,7 @@ const plans = [
     suffix: "/mois",
     target: "Pour les cabinets dentaires & esthétiques",
     features: [
-      "Tout de Essential, plus :",
+      "Tout de Standard, plus :",
       "Jusqu'à 400 min/mois",
       "Automatisation des avis Google",
       "SMS anti no-show",
