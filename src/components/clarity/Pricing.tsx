@@ -8,41 +8,41 @@ const plans = [
   {
     name: "Standard",
     price: "€197",
-    suffix: "/mois",
-    target: "Pour les cabinets paramédicaux",
+    suffix: "/month",
+    target: "For paramedical practices",
     features: [
-      "Réceptionniste IA 24/7",
-      "Jusqu'à 200 min/mois",
-      "Prise de RDV + SMS de relance",
-      "Rapport mensuel",
-      "1 mise à jour/mois",
+      "24/7 AI receptionist",
+      "Up to 200 min/month",
+      "Appointment booking + SMS follow-up",
+      "Monthly report",
+      "1 update per month",
     ],
   },
   {
     name: "Pro",
     price: "€347",
-    suffix: "/mois",
-    target: "Pour les cabinets dentaires & esthétiques",
+    suffix: "/month",
+    target: "For dental & aesthetic clinics",
     features: [
-      "Tout de Standard, plus :",
-      "Jusqu'à 400 min/mois",
-      "Automatisation des avis Google",
-      "SMS anti no-show",
-      "Bilan bi-mensuel",
+      "Everything in Standard, plus:",
+      "Up to 400 min/month",
+      "Google reviews automation",
+      "No-show SMS reminders",
+      "Bi-monthly review",
     ],
     highlighted: true,
   },
   {
     name: "Premium",
     price: "€497–797",
-    suffix: "/mois",
-    target: "Pour l'immobilier, le juridique & le luxe",
+    suffix: "/month",
+    target: "For real estate, legal & luxury",
     features: [
-      "Tout de Pro, plus :",
-      "Minutes illimitées",
-      "Agent multilingue FR/EN/ES",
-      "Intégration CRM",
-      "Appel stratégique hebdomadaire",
+      "Everything in Pro, plus:",
+      "Unlimited minutes",
+      "Multilingual agent EN/FR/ES",
+      "CRM integration",
+      "Weekly strategy call",
     ],
   },
 ];
@@ -52,19 +52,19 @@ export const Pricing = ({ onDemoClick }: PricingProps) => {
     <section id="offres" className="bg-background py-[120px] px-6">
       <div className="container mx-auto max-w-6xl">
         <FadeInUp>
-          <p className="label-eyebrow text-accent">Nos offres</p>
+          <p className="label-eyebrow text-accent">Our plans</p>
         </FadeInUp>
         <FadeInUp delay={0.15}>
           <h2
             className="font-serif font-light text-foreground mt-6 leading-[1.1]"
             style={{ fontSize: "clamp(32px, 4.5vw, 44px)" }}
           >
-            Trois formules. Un seul résultat.
+            Three plans. One outcome.
           </h2>
         </FadeInUp>
         <FadeInUp delay={0.3}>
           <p className="text-text-muted font-light mt-5" style={{ fontSize: 15, maxWidth: 560 }}>
-            Tarifé selon la valeur que vous créez, pas selon ce qu'il nous coûte.
+            Priced on the value we create, not on what it costs us.
           </p>
         </FadeInUp>
 
@@ -79,7 +79,7 @@ export const Pricing = ({ onDemoClick }: PricingProps) => {
                       className="bg-accent text-accent-foreground font-medium px-3 py-[6px]"
                       style={{ fontSize: 9, letterSpacing: "0.15em", borderRadius: 0 }}
                     >
-                      LE PLUS POPULAIRE
+                      MOST POPULAR
                     </span>
                   </div>
                 )}
@@ -144,7 +144,7 @@ export const Pricing = ({ onDemoClick }: PricingProps) => {
                     onClick={onDemoClick}
                     className="mt-8 text-accent text-sm font-medium hover:opacity-80 transition-opacity self-start"
                   >
-                    Demander une démo →
+                    Book a demo →
                   </button>
                 </div>
               </StaggerItem>
@@ -157,7 +157,7 @@ export const Pricing = ({ onDemoClick }: PricingProps) => {
             className="text-text-muted text-center mt-12 font-light"
             style={{ fontSize: 11 }}
           >
-            Frais d'installation unique · Sans engagement · Opérationnel en 48h
+            One-time setup fee · No commitment · Live in 48 hours
           </p>
         </FadeInUp>
       </div>

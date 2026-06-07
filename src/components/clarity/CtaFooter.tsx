@@ -15,7 +15,7 @@ export const CtaFooter = ({ onDemoClick }: CtaFooterProps) => {
               className="font-serif font-light text-foreground leading-[1.1]"
               style={{ fontSize: "clamp(32px, 4.5vw, 44px)" }}
             >
-              Prêt à ne plus jamais manquer un appel ?
+              Ready to never miss another call?
             </h2>
           </FadeInUp>
           <FadeInUp delay={0.15}>
@@ -23,7 +23,7 @@ export const CtaFooter = ({ onDemoClick }: CtaFooterProps) => {
               className="text-text-muted font-light mt-6 mx-auto"
               style={{ fontSize: 15, maxWidth: 480 }}
             >
-              Réservez une démonstration de 15 minutes. Gratuit, sans engagement.
+              Book a 15-minute demo. Free, no commitment.
             </p>
           </FadeInUp>
           <FadeInUp delay={0.3}>
@@ -36,7 +36,7 @@ export const CtaFooter = ({ onDemoClick }: CtaFooterProps) => {
                 fontSize: 14,
               }}
             >
-              Demander une démo
+              Book a demo
             </button>
           </FadeInUp>
         </div>
@@ -46,7 +46,7 @@ export const CtaFooter = ({ onDemoClick }: CtaFooterProps) => {
         <div className="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-4">
           <img src={logo} alt="Klora" className="h-7 w-auto" />
           <p className="text-text-muted text-center font-light" style={{ fontSize: 12 }}>
-            © 2025 Klora — AI Voice Agency — Nice, Côte d'Azur
+            © 2025 Klora — AI Voice Agency — Nice, French Riviera
           </p>
           <a
             href="mailto:contact@klora-agency.fr"

@@ -10,19 +10,19 @@ export const DemoModal = ({ open, onOpenChange }: DemoModalProps) => {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-2xl rounded-none border-divider bg-background p-0">
         <DialogHeader className="border-b border-divider px-8 pt-8 pb-6">
-          <p className="label-eyebrow text-accent">Démo · 15 minutes</p>
+          <p className="label-eyebrow text-accent">Demo · 15 minutes</p>
           <DialogTitle className="font-serif text-3xl font-light text-foreground">
-            Réservez votre démonstration
+            Book your demo
           </DialogTitle>
           <p className="text-sm text-text-muted font-light pt-2">
-            Choisissez un créneau qui vous convient. Gratuit, sans engagement.
+            Pick a time that works for you. Free, no commitment.
           </p>
         </DialogHeader>
         <div className="px-8 py-6">
           <div className="border border-divider bg-bg-soft overflow-hidden">
             <iframe
               src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3E0m_G5AEy5KBxLK21D2XeJnd5vLbA85Wp7ZjlCuQudS8L5oiS6Ox8WANUXpTB0YMWNwCkhBw8?gv=true"
-              title="Réserver un rendez-vous avec Klora"
+              title="Book an appointment with Klora"
               className="w-full h-[600px] border-0"
               loading="lazy"
             />

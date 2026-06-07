@@ -2,22 +2,22 @@ import { FadeInUp, StaggerGroup, StaggerItem } from "./motion";
 
 const cards = [
   {
-    label: "Disponibilité",
-    title: "24h/24, 7j/7",
-    body: "Sophie répond à chaque appel, y compris le soir, le week-end et les jours fériés. Aucun appel ne tombe en messagerie.",
+    label: "Availability",
+    title: "24/7, every day",
+    body: "Sophie answers every call — evenings, weekends, and holidays included. No call ever drops to voicemail.",
     accent: true,
   },
   {
-    title: "Prise de rendez-vous instantanée",
-    body: "Sophie consulte votre agenda en temps réel et pose les rendez-vous directement — sans double réservation, sans allers-retours.",
+    title: "Instant appointment booking",
+    body: "Sophie checks your calendar in real time and books appointments directly — no double bookings, no back-and-forth.",
   },
   {
-    title: "SMS de relance automatique",
-    body: "Chaque appel manqué déclenche un SMS en moins de 60 secondes avec un lien de réservation. Les prospects qui partent reviennent.",
+    title: "Automatic SMS follow-up",
+    body: "Every missed call triggers an SMS within 60 seconds with a booking link. Prospects who leave come back.",
   },
   {
-    title: "Rapport mensuel de performance",
-    body: "Appels traités, rendez-vous pris, chiffre d'affaires récupéré. Un document clair, chaque mois, qui justifie votre investissement.",
+    title: "Monthly performance report",
+    body: "Calls handled, appointments booked, revenue recovered. A clear document, every month, that justifies your investment.",
   },
 ];
 
@@ -26,19 +26,19 @@ export const Solution = () => {
     <section className="bg-bg-soft py-[120px] px-6">
       <div className="container mx-auto max-w-6xl">
         <FadeInUp>
-          <p className="label-eyebrow text-accent">La solution</p>
+          <p className="label-eyebrow text-accent">The solution</p>
         </FadeInUp>
         <FadeInUp delay={0.15}>
           <h2
             className="font-serif font-light text-foreground mt-6 leading-[1.1]"
             style={{ fontSize: "clamp(34px, 5vw, 48px)" }}
           >
-            Sophie répond. Toujours.
+            Sophie answers. Always.
           </h2>
         </FadeInUp>
         <FadeInUp delay={0.3}>
           <p className="text-text-muted font-light mt-5" style={{ fontSize: 16, maxWidth: 560 }}>
-            Une réceptionniste IA configurée pour votre activité. Opérationnelle en 48 heures.
+            An AI receptionist configured for your business. Up and running in 48 hours.
           </p>
         </FadeInUp>
 

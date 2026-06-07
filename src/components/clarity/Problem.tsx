@@ -3,18 +3,18 @@ import { FadeInUp, StaggerGroup, StaggerItem } from "./motion";
 const stats = [
   {
     n: "62%",
-    label: "Des appels manqués",
-    body: "En moyenne, pendant les heures ouvrées habituelles.",
+    label: "Of calls missed",
+    body: "On average, even during regular business hours.",
   },
   {
     n: "93%",
-    label: "Ne rappellent jamais",
-    body: "Après la messagerie, le prospect contacte le concurrent suivant.",
+    label: "Never call back",
+    body: "After voicemail, the prospect dials the next competitor.",
   },
   {
     n: "22×",
-    label: "Le ROI moyen",
-    body: "Pour un cabinet dentaire, chaque euro investi en rapporte vingt-deux.",
+    label: "The average ROI",
+    body: "For a dental practice, every euro invested returns twenty-two.",
   },
 ];
 
@@ -23,14 +23,14 @@ export const Problem = () => {
     <section id="approche" className="bg-background py-[120px] px-6">
       <div className="container mx-auto max-w-6xl">
         <FadeInUp>
-          <p className="label-eyebrow text-accent">Le problème</p>
+          <p className="label-eyebrow text-accent">The problem</p>
         </FadeInUp>
         <FadeInUp delay={0.15}>
           <h2
             className="font-serif font-light text-foreground mt-6 leading-[1.1]"
             style={{ fontSize: "clamp(34px, 5vw, 48px)", maxWidth: 600 }}
           >
-            Chaque appel sans réponse est un client perdu.
+            Every unanswered call is a lost client.
           </h2>
         </FadeInUp>
 
