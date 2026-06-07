@@ -7,9 +7,9 @@ interface HeroProps {
 }
 
 const stats = [
-  "62% d'appels manqués",
-  "93% ne rappellent pas",
-  "€450 perdu par appel",
+  "62% of calls missed",
+  "93% never call back",
+  "€450 lost per call",
 ];
 
 export const Hero = ({ onDemoClick }: HeroProps) => {
@@ -54,7 +54,7 @@ export const Hero = ({ onDemoClick }: HeroProps) => {
         <div className="container mx-auto max-w-4xl flex flex-col items-center text-center pt-24 pb-16">
           <FadeInUp>
             <p className="label-eyebrow text-accent" style={{ fontSize: 10, letterSpacing: "0.18em" }}>
-              Nice · Côte d'Azur
+              Nice · French Riviera
             </p>
           </FadeInUp>
 
@@ -63,7 +63,7 @@ export const Hero = ({ onDemoClick }: HeroProps) => {
               className="font-serif font-light text-white mt-6 leading-[1]"
               style={{ fontSize: "clamp(52px, 7vw, 88px)" }}
             >
-              Votre agence ne dort jamais.
+              Your business never sleeps.
             </h1>
           </FadeInUp>
 
@@ -72,9 +72,8 @@ export const Hero = ({ onDemoClick }: HeroProps) => {
               className="font-sans font-light text-[#9A9088] mt-8 mx-auto"
               style={{ fontSize: 16, lineHeight: 1.7, maxWidth: 540 }}
             >
-              Klora installe une réceptionniste IA qui répond à chaque appel,
-              prend les rendez-vous et récupère le chiffre d'affaires que vous
-              perdez en ce moment.
+              Klora deploys an AI receptionist that answers every call, books
+              appointments, and recovers the revenue you're losing right now.
             </p>
           </FadeInUp>
 
@@ -85,14 +84,14 @@ export const Hero = ({ onDemoClick }: HeroProps) => {
                 className="bg-accent text-accent-foreground font-medium px-9 py-[14px] text-sm hover:bg-accent/90 transition-colors"
                 style={{ borderRadius: 0 }}
               >
-                Voir la démo
+                See the demo
               </button>
               <button
                 onClick={() => scrollTo("#offres")}
                 className="bg-transparent text-white font-medium px-9 py-[14px] text-sm border hover:bg-white/5 transition-colors"
                 style={{ borderRadius: 0, borderColor: "rgba(255,255,255,0.2)" }}
               >
-                Découvrir nos offres
+                View our plans
               </button>
             </div>
           </FadeInUp>

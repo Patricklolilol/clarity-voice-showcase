@@ -7,8 +7,8 @@ interface NavProps {
 }
 
 const links = [
-  { label: "Notre approche", href: "#approche" },
-  { label: "Nos offres", href: "#offres" },
+  { label: "Our approach", href: "#approche" },
+  { label: "Our plans", href: "#offres" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -40,7 +40,7 @@ export const Nav = ({ onDemoClick }: NavProps) => {
     >
       <div className="container mx-auto flex h-16 items-center justify-between">
         <a href="#top" onClick={(e) => handleAnchor(e, "#top")} className="flex items-center">
-          <img src={logo} alt="Klora — Agence IA Vocale" className="h-9 w-auto" />
+          <img src={logo} alt="Klora — AI Voice Agency" className="h-9 w-auto" />
         </a>
 
         <nav className="hidden md:flex items-center gap-10">
@@ -59,7 +59,7 @@ export const Nav = ({ onDemoClick }: NavProps) => {
             className="bg-accent text-accent-foreground label-nav font-medium px-[22px] py-[10px] hover:bg-accent/90 transition-colors"
             style={{ borderRadius: 0 }}
           >
-            Demander une démo
+            Book a demo
           </button>
         </nav>
 
@@ -93,7 +93,7 @@ export const Nav = ({ onDemoClick }: NavProps) => {
               className="bg-accent text-accent-foreground label-nav font-medium px-[22px] py-[12px] mt-2"
               style={{ borderRadius: 0 }}
             >
-              Demander une démo
+              Book a demo
             </button>
           </div>
         </div>

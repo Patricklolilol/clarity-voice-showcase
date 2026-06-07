@@ -1,10 +1,10 @@
 import { FadeInUp, StaggerGroup, StaggerItem } from "./motion";
 
 const facts = [
-  { n: "0", label: "Agences IA locales sur la Côte d'Azur" },
-  { n: "48h", label: "Délai d'installation" },
-  { n: "3", label: "Langues parlées par vos agents" },
-  { n: "200+", label: "Prospects qualifiés dans votre zone" },
+  { n: "0", label: "Local AI agencies on the French Riviera" },
+  { n: "48h", label: "Setup time" },
+  { n: "3", label: "Languages your agents speak" },
+  { n: "200+", label: "Qualified prospects in your area" },
 ];
 
 export const WhyKlora = () => {
@@ -12,14 +12,14 @@ export const WhyKlora = () => {
     <section className="bg-bg-dark py-[120px] px-6">
       <div className="container mx-auto max-w-6xl">
         <FadeInUp>
-          <p className="label-eyebrow text-accent">Pourquoi Klora</p>
+          <p className="label-eyebrow text-accent">Why Klora</p>
         </FadeInUp>
         <FadeInUp delay={0.15}>
           <h2
             className="font-serif font-light text-white mt-6 leading-[1.1]"
             style={{ fontSize: "clamp(34px, 5vw, 48px)" }}
           >
-            Locaux. Multilingues. Les seuls.
+            Local. Multilingual. The only one.
           </h2>
         </FadeInUp>
         <FadeInUp delay={0.3}>
@@ -27,11 +27,10 @@ export const WhyKlora = () => {
             className="text-text-on-dark font-light mt-7"
             style={{ fontSize: 16, lineHeight: 1.8, maxWidth: 580 }}
           >
-            Nous sommes la seule agence IA physiquement présente sur la Côte
-            d'Azur. Nos agents conversent en français, anglais et espagnol —
-            une capacité qu'aucune solution nationale ne peut offrir. Et
-            contrairement aux plateformes SaaS, nous sommes disponibles le lundi
-            matin quand quelque chose ne va pas.
+            We're the only AI agency physically present on the French Riviera.
+            Our agents converse in French, English, and Spanish — a capability
+            no national platform can match. And unlike SaaS providers, we're
+            here on Monday morning when something goes wrong.
           </p>
         </FadeInUp>
 
