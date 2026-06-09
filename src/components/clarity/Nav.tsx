@@ -1,18 +1,14 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/klora-logo.png";
-
-interface NavProps {
-  onDemoClick: () => void;
-}
+import { PHONE_TEL } from "./constants";
 
 const links = [
-  { label: "Our approach", href: "#approche" },
-  { label: "Our plans", href: "#offres" },
+  { label: "How It Works", href: "#how" },
+  { label: "Our Plans", href: "#offres" },
   { label: "Contact", href: "#contact" },
 ];
 
-export const Nav = ({ onDemoClick }: NavProps) => {
+export const Nav = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -26,21 +22,24 @@ export const Nav = ({ onDemoClick }: NavProps) => {
   const handleAnchor = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setMobileOpen(false);
-    const el = document.querySelector(href);
-    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+    document.querySelector(href)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[rgba(250,250,248,0.95)] backdrop-blur-sm border-b border-divider"
+          ? "bg-background/80 backdrop-blur-md border-b border-divider"
           : "bg-transparent border-b border-transparent"
       }`}
     >
       <div className="container mx-auto flex h-16 items-center justify-between">
-        <a href="#top" onClick={(e) => handleAnchor(e, "#top")} className="flex items-center">
-          <img src={logo} alt="Klora — AI Voice Agency" className="h-9 w-auto" />
+        <a
+          href="#top"
+          onClick={(e) => handleAnchor(e, "#top")}
+          className="wordmark text-foreground text-base"
+        >
+          CLARITY
         </a>
 
         <nav className="hidden md:flex items-center gap-10">
@@ -54,13 +53,13 @@ export const Nav = ({ onDemoClick }: NavProps) => {
               {l.label}
             </a>
           ))}
-          <button
-            onClick={onDemoClick}
+          <a
+            href={`tel:${PHONE_TEL}`}
             className="bg-accent text-accent-foreground label-nav font-medium px-[22px] py-[10px] hover:bg-accent/90 transition-colors"
-            style={{ borderRadius: 0 }}
+            style={{ borderRadius: 2 }}
           >
-            Book a demo
-          </button>
+            Call Our AI →
+          </a>
         </nav>
 
         <button
@@ -85,16 +84,14 @@ export const Nav = ({ onDemoClick }: NavProps) => {
                 {l.label}
               </a>
             ))}
-            <button
-              onClick={() => {
-                setMobileOpen(false);
-                onDemoClick();
-              }}
-              className="bg-accent text-accent-foreground label-nav font-medium px-[22px] py-[12px] mt-2"
-              style={{ borderRadius: 0 }}
+            <a
+              href={`tel:${PHONE_TEL}`}
+              onClick={() => setMobileOpen(false)}
+              className="bg-accent text-accent-foreground label-nav font-medium px-[22px] py-[12px] mt-2 text-center"
+              style={{ borderRadius: 2 }}
             >
-              Book a demo
-            </button>
+              Call Our AI →
+            </a>
           </div>
         </div>
       )}
