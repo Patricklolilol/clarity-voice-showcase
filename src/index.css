@@ -2,46 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Klora design system — premium French consultancy meets cutting-edge AI.
-   All colors HSL. */
+/* Clarity design system — premium AI voice agency, dark navy + teal */
 
 @layer base {
   :root {
-    /* Brand palette */
-    --background: 60 14% 96%;        /* #FAFAF8 warm off-white */
-    --foreground: 24 9% 16%;         /* #2C2825 dark warm brown */
+    /* Brand palette — fully dark */
+    --background: 210 53% 11%;       /* #0D1B2A */
+    --foreground: 0 0% 100%;         /* #FFFFFF */
 
-    --bg-soft: 36 14% 91%;           /* #F0EDE8 */
-    --bg-dark: 24 13% 9%;            /* #1A1614 */
+    --bg-soft: 214 38% 14%;          /* #162032 card */
+    --bg-dark: 210 53% 8%;           /* deeper */
 
-    --text-muted: 28 8% 45%;         /* #7A7169 */
-    --text-on-dark: 30 8% 57%;       /* #9A9088 */
+    --text-muted: 209 30% 64%;       /* #8BA5BE */
+    --text-on-dark: 209 30% 64%;
 
-    --divider: 36 14% 87%;           /* #E8E4DF */
+    --divider: 210 30% 22%;
 
     --accent: 159 70% 37%;           /* #1D9E75 teal */
     --accent-foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 24 9% 16%;
+    --card: 214 38% 14%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 24 9% 16%;
+    --popover: 214 38% 14%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 24 13% 9%;
+    --primary: 159 70% 37%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 36 14% 91%;
-    --secondary-foreground: 24 9% 16%;
+    --secondary: 214 38% 18%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 36 14% 91%;
-    --muted-foreground: 28 8% 45%;
+    --muted: 214 38% 18%;
+    --muted-foreground: 209 30% 64%;
 
     --destructive: 0 70% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 36 14% 87%;
-    --input: 36 14% 87%;
+    --border: 210 30% 22%;
+    --input: 210 30% 22%;
     --ring: 159 70% 37%;
 
     --radius: 0.125rem;
@@ -84,5 +83,10 @@
     font-family: 'Inter', sans-serif;
     font-size: 13px;
     letter-spacing: 0.08em;
+  }
+  .wordmark {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.18em;
   }
 }

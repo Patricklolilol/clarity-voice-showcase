@@ -1,151 +1,133 @@
 import { FadeInUp, StaggerGroup, StaggerItem } from "./motion";
-
-interface PricingProps {
-  onDemoClick: () => void;
-}
+import { Check } from "lucide-react";
+import { PHONE_DISPLAY, PHONE_TEL } from "./constants";
 
 const plans = [
   {
     name: "Standard",
-    price: "€197",
+    price: "€297",
     suffix: "/month",
-    target: "For paramedical practices",
+    setup: "+ €200 one-time setup",
     features: [
-      "24/7 AI receptionist",
-      "Up to 200 min/month",
-      "Appointment booking + SMS follow-up",
-      "Monthly report",
-      "1 update per month",
+      "AI receptionist — 24/7 inbound calls",
+      "Up to 500 call minutes/month",
+      "Live calendar booking",
+      "Missed call SMS text-back (<60 seconds)",
+      "FAQ handling (services, hours, pricing)",
+      "Monthly performance report",
+      "1 language of your choice (FR/EN/ES)",
+      "Initial setup + 1 update/month",
     ],
+    highlighted: false,
   },
   {
-    name: "Pro",
-    price: "€347",
+    name: "Advanced",
+    price: "€597",
     suffix: "/month",
-    target: "For dental & aesthetic clinics",
+    setup: "+ €350 one-time setup",
     features: [
       "Everything in Standard, plus:",
-      "Up to 400 min/month",
-      "Google reviews automation",
-      "No-show SMS reminders",
-      "Bi-monthly review",
+      "Unlimited call minutes",
+      "Multilingual agent (FR + EN + ES)",
+      "Automated Google review requests",
+      "Appointment reminder sequences (SMS + email)",
+      "No-show re-engagement automation",
+      "Lead nurturing sequence",
+      "Two-way SMS inbox",
+      "Website chat widget (AI-powered)",
+      "Monthly 30-min strategy call",
+      "Priority same-day support",
+      "2 updates/month",
     ],
     highlighted: true,
   },
-  {
-    name: "Premium",
-    price: "€497–797",
-    suffix: "/month",
-    target: "For real estate, legal & luxury",
-    features: [
-      "Everything in Pro, plus:",
-      "Unlimited minutes",
-      "Multilingual agent EN/FR/ES",
-      "CRM integration",
-      "Weekly strategy call",
-    ],
-  },
 ];
 
-export const Pricing = ({ onDemoClick }: PricingProps) => {
+export const Pricing = () => {
   return (
-    <section id="offres" className="bg-background py-[120px] px-6">
-      <div className="container mx-auto max-w-6xl">
+    <section id="offres" className="bg-bg-soft py-[120px] px-6">
+      <div className="container mx-auto max-w-5xl">
         <FadeInUp>
-          <p className="label-eyebrow text-accent">Our plans</p>
+          <p className="label-eyebrow text-accent">Our Plans</p>
         </FadeInUp>
         <FadeInUp delay={0.15}>
           <h2
             className="font-serif font-light text-foreground mt-6 leading-[1.1]"
-            style={{ fontSize: "clamp(32px, 4.5vw, 44px)" }}
+            style={{ fontSize: "clamp(34px, 5vw, 48px)" }}
           >
-            Three plans. One outcome.
+            Transparent pricing. No surprises.
           </h2>
         </FadeInUp>
         <FadeInUp delay={0.3}>
           <p className="text-text-muted font-light mt-5" style={{ fontSize: 15, maxWidth: 560 }}>
-            Priced on the value we create, not on what it costs us.
+            Month-to-month. Cancel anytime. Operational in 48 hours.
           </p>
         </FadeInUp>
 
-        <StaggerGroup className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 items-stretch">
+        <StaggerGroup className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16 items-stretch">
           {plans.map((p) => {
-            const dark = p.highlighted;
+            const hi = p.highlighted;
             return (
               <StaggerItem key={p.name} className="relative">
-                {p.highlighted && (
+                {hi && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
                     <span
                       className="bg-accent text-accent-foreground font-medium px-3 py-[6px]"
-                      style={{ fontSize: 9, letterSpacing: "0.15em", borderRadius: 0 }}
+                      style={{ fontSize: 9, letterSpacing: "0.15em", borderRadius: 2 }}
                     >
                       MOST POPULAR
                     </span>
                   </div>
                 )}
                 <div
-                  className={`p-10 h-full flex flex-col border ${
-                    dark
-                      ? "bg-bg-dark border-bg-dark text-white"
-                      : "bg-background border-divider"
-                  }`}
-                  style={{ borderRadius: 0 }}
+                  className="p-10 h-full flex flex-col border border-divider bg-background relative"
+                  style={{ borderRadius: 2 }}
                 >
-                  <p
-                    className={`label-eyebrow ${dark ? "text-accent" : "text-text-muted"}`}
-                  >
-                    {p.name}
-                  </p>
+                  <div
+                    className={`absolute top-0 left-0 right-0 h-[3px] ${
+                      hi ? "bg-accent" : "bg-divider"
+                    }`}
+                  />
+                  <p className="label-eyebrow text-text-muted">{p.name}</p>
                   <div className="mt-5 flex items-baseline gap-1">
                     <span
-                      className={`font-serif font-light leading-none ${
-                        dark ? "text-white" : "text-foreground"
-                      }`}
-                      style={{ fontSize: 44 }}
+                      className="font-serif font-light leading-none text-foreground"
+                      style={{ fontSize: 48 }}
                     >
                       {p.price}
                     </span>
-                    <span
-                      className={`text-sm font-light ${
-                        dark ? "text-text-on-dark" : "text-text-muted"
-                      }`}
-                    >
-                      {p.suffix}
-                    </span>
+                    <span className="text-sm font-light text-text-muted">{p.suffix}</span>
                   </div>
-                  <p
-                    className={`mt-3 font-light ${
-                      dark ? "text-text-on-dark" : "text-text-muted"
-                    }`}
-                    style={{ fontSize: 13 }}
-                  >
-                    {p.target}
+                  <p className="mt-3 font-light text-text-muted" style={{ fontSize: 12 }}>
+                    {p.setup}
                   </p>
 
-                  <div
-                    className={`h-px my-7 ${dark ? "bg-white/10" : "bg-divider"}`}
-                  />
+                  <div className="h-px my-7 bg-divider" />
 
                   <ul className="space-y-3 flex-1">
                     {p.features.map((f) => (
                       <li
                         key={f}
-                        className={`font-light ${
-                          dark ? "text-white/85" : "text-foreground/80"
-                        }`}
+                        className="flex gap-3 font-light text-foreground/85"
                         style={{ fontSize: 14, lineHeight: 1.6 }}
                       >
-                        {f}
+                        <Check size={16} className="text-accent shrink-0 mt-[3px]" />
+                        <span>{f}</span>
                       </li>
                     ))}
                   </ul>
 
-                  <button
-                    onClick={onDemoClick}
-                    className="mt-8 text-accent text-sm font-medium hover:opacity-80 transition-opacity self-start"
+                  <a
+                    href={`tel:${PHONE_TEL}`}
+                    className={`mt-8 text-center font-medium px-9 py-[14px] text-sm transition-colors ${
+                      hi
+                        ? "bg-accent text-accent-foreground hover:bg-accent/90"
+                        : "border border-divider text-foreground hover:bg-white/5"
+                    }`}
+                    style={{ borderRadius: 2 }}
                   >
-                    Book a demo →
-                  </button>
+                    Get Started
+                  </a>
                 </div>
               </StaggerItem>
             );
@@ -153,12 +135,20 @@ export const Pricing = ({ onDemoClick }: PricingProps) => {
         </StaggerGroup>
 
         <FadeInUp delay={0.4}>
-          <p
-            className="text-text-muted text-center mt-12 font-light"
-            style={{ fontSize: 11 }}
-          >
-            One-time setup fee · No commitment · Live in 48 hours
-          </p>
+          <div className="text-center mt-14">
+            <p className="text-text-muted font-light" style={{ fontSize: 14 }}>
+              Not sure which plan is right for you?{" "}
+              <br className="sm:hidden" />
+              Call our AI and we'll figure it out together.
+            </p>
+            <a
+              href={`tel:${PHONE_TEL}`}
+              className="inline-block mt-4 text-accent font-medium hover:opacity-80 transition-opacity"
+              style={{ fontSize: 14 }}
+            >
+              {PHONE_DISPLAY} →
+            </a>
+          </div>
         </FadeInUp>
       </div>
     </section>

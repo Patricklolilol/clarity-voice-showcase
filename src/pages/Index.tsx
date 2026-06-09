@@ -1,27 +1,23 @@
-import { useState } from "react";
 import { Nav } from "@/components/clarity/Nav";
 import { Hero } from "@/components/clarity/Hero";
-import { Problem } from "@/components/clarity/Problem";
-import { Solution } from "@/components/clarity/Solution";
+import { HowItWorks } from "@/components/clarity/HowItWorks";
+import { Multilingual } from "@/components/clarity/Multilingual";
 import { Pricing } from "@/components/clarity/Pricing";
-import { WhyKlora } from "@/components/clarity/WhyKlora";
-import { CtaFooter } from "@/components/clarity/CtaFooter";
-import { DemoModal } from "@/components/clarity/DemoModal";
+import { DemoCta } from "@/components/clarity/DemoCta";
+import { SocialProof } from "@/components/clarity/SocialProof";
+import { Footer } from "@/components/clarity/Footer";
 
 const Index = () => {
-  const [demoOpen, setDemoOpen] = useState(false);
-  const openDemo = () => setDemoOpen(true);
-
   return (
     <main className="bg-background text-foreground">
-      <Nav onDemoClick={openDemo} />
-      <Hero onDemoClick={openDemo} />
-      <Problem />
-      <Solution />
-      <Pricing onDemoClick={openDemo} />
-      <WhyKlora />
-      <CtaFooter onDemoClick={openDemo} />
-      <DemoModal open={demoOpen} onOpenChange={setDemoOpen} />
+      <Nav />
+      <Hero />
+      <HowItWorks />
+      <Multilingual />
+      <Pricing />
+      <DemoCta />
+      <SocialProof />
+      <Footer />
     </main>
   );
 };
