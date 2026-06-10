@@ -4,7 +4,7 @@ import { PHONE_TEL } from "./constants";
 
 const links = [
   { label: "How It Works", href: "#how" },
-  { label: "Our Plans", href: "#offres" },
+  { label: "Pricing", href: "#offres" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -29,17 +29,27 @@ export const Nav = () => {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-md border-b border-divider"
+          ? "backdrop-blur-md border-b"
           : "bg-transparent border-b border-transparent"
       }`}
+      style={
+        scrolled
+          ? { backgroundColor: "rgba(13,27,42,0.95)", borderBottomColor: "rgba(255,255,255,0.06)" }
+          : undefined
+      }
     >
       <div className="container mx-auto flex h-16 items-center justify-between">
         <a
           href="#top"
           onClick={(e) => handleAnchor(e, "#top")}
-          className="wordmark text-foreground text-base"
+          className="flex items-center gap-2 wordmark text-foreground text-base"
         >
-          CLARITY
+          <span
+            aria-hidden
+            className="inline-block w-[7px] h-[7px] rounded-full bg-accent"
+            style={{ boxShadow: "0 0 12px hsl(var(--accent) / 0.7)" }}
+          />
+          KLORA
         </a>
 
         <nav className="hidden md:flex items-center gap-10">
@@ -55,8 +65,7 @@ export const Nav = () => {
           ))}
           <a
             href={`tel:${PHONE_TEL}`}
-            className="bg-accent text-accent-foreground label-nav font-medium px-[22px] py-[10px] hover:bg-accent/90 transition-colors"
-            style={{ borderRadius: 2 }}
+            className="bg-accent text-accent-foreground label-nav font-medium px-[22px] py-[10px] hover-lift hover:bg-accent-light"
           >
             Call Our AI →
           </a>
@@ -67,19 +76,22 @@ export const Nav = () => {
           onClick={() => setMobileOpen((v) => !v)}
           aria-label="Menu"
         >
-          {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden bg-background border-t border-divider">
-          <div className="container mx-auto py-6 flex flex-col gap-5">
+        <div
+          className="md:hidden fixed inset-0 top-16 z-40"
+          style={{ backgroundColor: "rgba(13,27,42,0.98)" }}
+        >
+          <div className="container mx-auto py-10 flex flex-col gap-7">
             {links.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
                 onClick={(e) => handleAnchor(e, l.href)}
-                className="label-nav text-text-muted"
+                className="text-foreground text-2xl font-light"
               >
                 {l.label}
               </a>
@@ -87,8 +99,7 @@ export const Nav = () => {
             <a
               href={`tel:${PHONE_TEL}`}
               onClick={() => setMobileOpen(false)}
-              className="bg-accent text-accent-foreground label-nav font-medium px-[22px] py-[12px] mt-2 text-center"
-              style={{ borderRadius: 2 }}
+              className="bg-accent text-accent-foreground label-nav font-medium px-[22px] py-[14px] mt-4 text-center"
             >
               Call Our AI →
             </a>

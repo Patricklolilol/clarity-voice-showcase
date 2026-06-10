@@ -2,40 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Clarity design system — premium AI voice agency, dark navy + teal */
+/* Klora design system — premium AI voice agency, dark navy + teal */
 
 @layer base {
   :root {
-    /* Brand palette — fully dark */
     --background: 210 53% 11%;       /* #0D1B2A */
-    --foreground: 0 0% 100%;         /* #FFFFFF */
-
-    --bg-soft: 214 38% 14%;          /* #162032 card */
-    --bg-dark: 210 53% 8%;           /* deeper */
+    --foreground: 0 0% 100%;
+    --bg-soft: 214 38% 14%;          /* #162032 */
+    --bg-card: 213 47% 19%;          /* #1A2F4A */
+    --bg-dark: 210 53% 8%;
 
     --text-muted: 209 30% 64%;       /* #8BA5BE */
     --text-on-dark: 209 30% 64%;
 
     --divider: 210 30% 22%;
 
-    --accent: 159 70% 37%;           /* #1D9E75 teal */
+    --accent: 159 70% 37%;           /* #1D9E75 */
+    --accent-light: 156 70% 46%;     /* #23C48E */
     --accent-foreground: 0 0% 100%;
 
-    --card: 214 38% 14%;
+    --card: 213 47% 19%;
     --card-foreground: 0 0% 100%;
-
-    --popover: 214 38% 14%;
+    --popover: 213 47% 19%;
     --popover-foreground: 0 0% 100%;
 
     --primary: 159 70% 37%;
     --primary-foreground: 0 0% 100%;
-
     --secondary: 214 38% 18%;
     --secondary-foreground: 0 0% 100%;
-
     --muted: 214 38% 18%;
     --muted-foreground: 209 30% 64%;
-
     --destructive: 0 70% 45%;
     --destructive-foreground: 0 0% 100%;
 
@@ -43,28 +39,13 @@
     --input: 210 30% 22%;
     --ring: 159 70% 37%;
 
-    --radius: 0.125rem;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --radius: 0rem;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-feature-settings: "ss01", "cv11";
@@ -76,17 +57,52 @@
     font-family: 'Inter', sans-serif;
     font-size: 10px;
     font-weight: 500;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
   }
   .label-nav {
     font-family: 'Inter', sans-serif;
     font-size: 13px;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.04em;
   }
   .wordmark {
     font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    letter-spacing: 0.18em;
+    font-weight: 200;
+    letter-spacing: 0.14em;
   }
+  .hover-lift {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  .hover-lift:hover { transform: translateY(-2px); }
+}
+
+@layer utilities {
+  .pulse-ring {
+    position: relative;
+  }
+  .pulse-ring::before,
+  .pulse-ring::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid hsl(var(--accent));
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    animation: pulseRing 2.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  }
+  .pulse-ring::after { animation-delay: 1.2s; }
+
+  @keyframes pulseRing {
+    0%   { opacity: 0.35; transform: scale(1); }
+    100% { opacity: 0;    transform: scale(1.08); }
+  }
+
+  .blink-cursor::after {
+    content: "▍";
+    margin-left: 2px;
+    color: hsl(var(--accent));
+    animation: blink 1s steps(2, start) infinite;
+  }
+  @keyframes blink { to { visibility: hidden; } }
 }
