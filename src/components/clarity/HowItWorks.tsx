@@ -36,9 +36,9 @@ export const HowItWorks = () => {
         </FadeInUp>
 
         <StaggerGroup className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] items-start gap-10 md:gap-6 mt-16">
-          {steps.map((s, i) => (
-            <>
-              <StaggerItem key={s.n}>
+          {steps.flatMap((s, i) => {
+            const nodes = [
+              <StaggerItem key={`s-${s.n}`}>
                 <div
                   className="w-12 h-12 rounded-full bg-accent/15 border border-accent flex items-center justify-center font-serif font-light text-accent"
                   style={{ fontSize: 20 }}
@@ -57,17 +57,20 @@ export const HowItWorks = () => {
                 >
                   {s.body}
                 </p>
-              </StaggerItem>
-              {i < steps.length - 1 && (
+              </StaggerItem>,
+            ];
+            if (i < steps.length - 1) {
+              nodes.push(
                 <StaggerItem
-                  key={`arrow-${i}`}
-                  className="hidden md:flex items-center justify-center pt-2"
+                  key={`a-${i}`}
+                  className="hidden md:flex items-center justify-center pt-6"
                 >
                   <ArrowRight size={20} className="text-accent" />
-                </StaggerItem>
-              )}
-            </>
-          ))}
+                </StaggerItem>,
+              );
+            }
+            return nodes;
+          })}
         </StaggerGroup>
       </div>
     </section>
