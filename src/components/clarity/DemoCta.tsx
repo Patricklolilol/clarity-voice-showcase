@@ -1,12 +1,16 @@
 import { FadeInUp } from "./motion";
-import { PHONE_DISPLAY, PHONE_TEL } from "./constants";
+import { CONTACT_EMAIL, PHONE_DISPLAY, PHONE_TEL } from "./constants";
 
 export const DemoCta = () => {
   return (
-    <section className="relative bg-background py-[140px] px-6 overflow-hidden">
+    <section
+      id="contact"
+      className="relative py-[140px] px-6 overflow-hidden"
+      style={{ background: "hsl(var(--bg-card))" }}
+    >
       <div
         aria-hidden
-        className="absolute inset-0 opacity-[0.25] pointer-events-none"
+        className="absolute inset-0 opacity-[0.18] pointer-events-none"
         style={{
           background:
             "radial-gradient(ellipse at center, hsl(var(--accent)) 0%, transparent 55%)",
@@ -16,37 +20,60 @@ export const DemoCta = () => {
         <FadeInUp>
           <h2
             className="font-serif font-light text-foreground leading-[1.05]"
-            style={{ fontSize: "clamp(40px, 6vw, 64px)" }}
+            style={{ fontSize: "clamp(40px, 6vw, 52px)" }}
           >
             Don't take our word for it.
           </h2>
         </FadeInUp>
-        <FadeInUp delay={0.15}>
+        <FadeInUp delay={0.12}>
           <p
             className="text-text-muted font-light mt-6 mx-auto"
-            style={{ fontSize: 17, lineHeight: 1.7, maxWidth: 560 }}
+            style={{ fontSize: 18, lineHeight: 1.7, maxWidth: 560 }}
           >
-            Call this number right now. Our AI will pick up immediately.
-            That's exactly what your customers would experience.
+            Call this number right now. Klora's AI picks up on the first ring.
           </p>
         </FadeInUp>
-        <FadeInUp delay={0.3}>
-          <a
-            href={`tel:${PHONE_TEL}`}
-            className="block mt-12 text-accent hover:opacity-90 transition-opacity"
-            style={{
-              fontFamily: "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
-              fontSize: "clamp(32px, 5vw, 56px)",
-              letterSpacing: "0.04em",
-              fontWeight: 500,
-            }}
-          >
-            {PHONE_DISPLAY}
-          </a>
+        <FadeInUp delay={0.24}>
+          <div className="mt-12 flex justify-center">
+            <div
+              className="pulse-ring inline-block"
+              style={{
+                padding: "28px 44px",
+                border: "1px solid hsl(var(--accent) / 0.6)",
+                borderRadius: 12,
+                background: "hsl(var(--bg-dark) / 0.5)",
+              }}
+            >
+              <a
+                href={`tel:${PHONE_TEL}`}
+                className="block text-accent hover:text-accent-light transition-colors"
+                style={{
+                  fontFamily: "'JetBrains Mono', monospace",
+                  fontSize: "clamp(32px, 5vw, 56px)",
+                  letterSpacing: "0.04em",
+                  fontWeight: 300,
+                  lineHeight: 1.1,
+                }}
+              >
+                {PHONE_DISPLAY}
+              </a>
+            </div>
+          </div>
         </FadeInUp>
-        <FadeInUp delay={0.45}>
+        <FadeInUp delay={0.36}>
           <p className="text-text-muted font-light mt-6" style={{ fontSize: 12 }}>
-            Available 24/7 · No commitment · Takes 90 seconds
+            Available 24/7 · 90 seconds · No commitment
+          </p>
+        </FadeInUp>
+        <FadeInUp delay={0.48}>
+          <p className="mt-4" style={{ fontSize: 13 }}>
+            <span className="text-text-muted font-light">Prefer email? </span>
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="text-accent hover:text-accent-light transition-colors"
+            >
+              {CONTACT_EMAIL}
+            </a>
           </p>
         </FadeInUp>
       </div>
