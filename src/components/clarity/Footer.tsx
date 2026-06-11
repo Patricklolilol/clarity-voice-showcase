@@ -1,4 +1,4 @@
-import { CONTACT_EMAIL } from "./constants";
+import { CONTACT_EMAIL, PHONE_DISPLAY, PHONE_TEL } from "./constants";
 
 export const Footer = () => {
   return (
@@ -14,13 +14,22 @@ export const Footer = () => {
         >
           © 2025 Klora AI Voice Agency · Nice, Côte d'Azur · Operating Globally
         </p>
-        <a
-          href={`mailto:${CONTACT_EMAIL}`}
-          className="text-accent font-medium hover:text-accent-light transition-colors"
-          style={{ fontSize: 12 }}
-        >
-          {CONTACT_EMAIL}
-        </a>
+        <div className="flex flex-col md:items-end items-center gap-1">
+          <a
+            href={`tel:${PHONE_TEL}`}
+            className="text-accent font-medium hover:text-accent-light transition-colors"
+            style={{ fontSize: 12 }}
+          >
+            {PHONE_DISPLAY}
+          </a>
+          <a
+            href={`mailto:${CONTACT_EMAIL}`}
+            className="text-text-muted font-light hover:text-foreground transition-colors"
+            style={{ fontSize: 12 }}
+          >
+            {CONTACT_EMAIL}
+          </a>
+        </div>
       </div>
     </footer>
   );

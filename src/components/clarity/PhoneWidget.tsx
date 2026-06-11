@@ -18,6 +18,7 @@ export const PhoneWidget = ({
         border: "1px solid hsl(var(--accent) / 0.6)",
         padding: size === "lg" ? "36px 44px" : "26px 32px",
         borderRadius: 12,
+        boxShadow: "0 0 0 1px #1D9E75, 0 0 20px rgba(29,158,117,0.15)",
       }}
     >
       <p
